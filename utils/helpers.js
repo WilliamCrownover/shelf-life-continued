@@ -1,48 +1,56 @@
-const { DateTime } = require("luxon");
+const { DateTime } = require( 'luxon' );
 
 module.exports = {
-    formatDate: (date) => {
-        // Format date as MM/DD/YYYY
-        return date.toLocaleDateString();
-    },
+	formatDate: ( date ) => {
+		// Format date as MM/DD/YYYY
+		return date.toLocaleDateString();
+	},
 
-    formatSequelDate: (date) => {
-        return DateTime.fromISO(date).toFormat('M-d-yyyy');
-    },
+	formatSequelDate: ( date ) => {
+		return DateTime.fromISO( date ).toFormat( 'M-d-yyyy' );
+	},
 
-    expiredCheck: (date) => {
-        expiration = DateTime.fromISO(date);
-        today = DateTime.now();
+	expiredCheck: ( date ) => {
+		const expiration = DateTime.fromISO( date );
+		const today = DateTime.now();
 
-        dateDifference = (expiration.diff(today)).as('days');
+		const dateDifference = ( expiration.diff( today ) ).as( 'days' );
 
-        if (dateDifference < -1) return true;
-    },
+		if ( dateDifference < -1 ) {
+			return true;
+		}
+	},
 
-    weekCheck: (date) => {
-        expiration = DateTime.fromISO(date);
-        today = DateTime.now();
+	weekCheck: ( date ) => {
+		const expiration = DateTime.fromISO( date );
+		const today = DateTime.now();
 
-        dateDifference = (expiration.diff(today)).as('days');
+		const dateDifference = ( expiration.diff( today ) ).as( 'days' );
 
-        if (dateDifference >= -1 && dateDifference <= 7) return true;
-    },
+		if ( dateDifference >= -1 && dateDifference <= 7 ) {
+			return true;
+		}
+	},
 
-    monthCheck: (date) => {
-        expiration = DateTime.fromISO(date);
-        today = DateTime.now();
+	monthCheck: ( date ) => {
+		const expiration = DateTime.fromISO( date );
+		const today = DateTime.now();
 
-        dateDifference = (expiration.diff(today)).as('days');
+		const dateDifference = ( expiration.diff( today ) ).as( 'days' );
 
-        if (dateDifference > 7 && dateDifference <= 30) return true;
-    },
+		if ( dateDifference > 7 && dateDifference <= 30 ) {
+			return true;
+		}
+	},
 
-    noRushCheck: (date) => {
-        expiration = DateTime.fromISO(date);
-        today = DateTime.now();
+	noRushCheck: ( date ) => {
+		const expiration = DateTime.fromISO( date );
+		const today = DateTime.now();
 
-        dateDifference = (expiration.diff(today)).as('days');
+		const dateDifference = ( expiration.diff( today ) ).as( 'days' );
 
-        if (dateDifference > 30) return true;
-    }
+		if ( dateDifference > 30 ) {
+			return true;
+		}
+	}
 };
