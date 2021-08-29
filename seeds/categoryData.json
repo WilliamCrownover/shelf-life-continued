@@ -1,0 +1,20 @@
+[
+    {
+      "id": "1",
+      "category_name": "fridge"
+    },
+    {
+        "id": "2",
+        "category_name": "freezer"
+    },
+    {
+        "id": "3",
+        "category_name": "produce"
+    },
+    {
+        "id": "4",
+        "category_name": "cupboard"
+    }
+    
+  ]
+  

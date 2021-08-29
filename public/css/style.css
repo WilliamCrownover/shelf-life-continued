@@ -1,0 +1,337 @@
+* {
+    font-family: 'Red Hat Display', sans-serif;
+    box-sizing: border-box;
+}
+
+:root {
+    --htmlBG: #f5f2eb;
+    --titleText: #ddbe96;
+    --titleBG: #21233f;
+    --asideBG: #353966;
+    --expired: #cc4f46;
+    --thisWeek: #cca246;
+    --thisMonth: #99cc46;
+    --noRush: #4690cc;
+}
+
+html, body {
+    background-color: var(--htmlBG);
+    height: 100%;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+}
+
+.leftAside {
+    display: inline-block;
+    width: 320px;
+    background-color: var(--asideBG);
+    padding-bottom: 50px;
+}
+
+.brandTitle, .brandTitle a {
+    text-decoration: none;
+    background-color: var(--titleBG);
+    padding: 10px 0;
+    border-bottom: var(--titleText) solid 8px;
+}
+
+h1 {
+    font-family: 'Recursive', Arial, Helvetica, sans-serif;
+    color: var(--titleText);
+    width: 320px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+.shelf {
+    border-bottom: var(--titleText) solid 3px;
+}
+
+.loginForm, .signupForm {
+    padding: 40px 0;
+    border-bottom: var(--titleText) solid 8px;
+}
+
+.form-group {
+    margin: 0 auto;
+    width: 90%;
+}
+
+.formInput {
+    width: 97%;
+    margin: 10px auto;
+}
+
+input {
+    height: 1.8rem;
+}
+
+.formBtn, #logoutBtn, .addItemBtn {
+    display: block;
+    width: 55%;
+    height: 30px;
+    margin: 0px auto;
+    background-color: var(--titleText);
+    color: var(--titleBG);
+    font-weight: 500;
+    font-size: 1.2rem;
+    border: none;
+    transition: background-color .3s;
+}
+
+.formBtn:hover, #logoutBtn:hover, .addItemBtn:hover {
+    background-color: var(--htmlBG);
+    transition: background-color .3s;
+}
+
+.pageNav, .pageNav a {
+    text-decoration: none;
+    background-color: var(--titleText);
+    width: 75%;
+    margin: 40px auto;
+    border-radius: 15px;
+    padding: 5px 0;
+    transition: background-color .3s;
+}
+
+h2 {
+    color: var(--titleBG);
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.pageNav:hover {
+    background-color: var(--htmlBG);
+    transition: background-color .3s;
+}
+
+.sectionContent {
+    flex: 1;
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin: 0;
+    background-color: var(--titleText);
+    color: var(--titleBG);
+    padding: 26px 50px;
+}
+
+.allLists {
+    margin: 50px;
+}
+
+.listContainer, .itemEntryCard {
+    width: 100%;
+    padding: 30px;
+    margin-bottom: 30px;
+    background-color: var(--asideBG);
+    border-radius: 10px;
+}
+
+h4 {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 1.5rem;
+    color: var(--htmlBG);
+}
+
+.listRow {
+    display: flex;
+    background-color: var(--htmlBG);
+}
+
+h5 {
+    color: var(--titleBG);
+    font-size: 1rem;
+    margin: 0;
+    padding: 5px;
+    border: solid var(--titleBG) 1px;
+    flex: 1;
+}
+
+.tag {
+    flex: 0 0 100px;
+}
+
+.expired {
+    background-color: var(--expired);
+}
+
+.thisWeek {
+    background-color: var(--thisWeek);
+}
+
+.thisMonth {
+    background-color: var(--thisMonth);
+}
+
+.noRush {
+    background-color: var(--noRush);
+}
+
+.category {
+    flex: 0 0 100px;
+}
+
+.purchased {
+    flex: 0 0 100px;
+}
+
+.deleteX {
+    flex: 0 0 20px;
+    background-color: var(--titleText);
+    color: rgb(146, 25, 25);
+}
+
+.addItemForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.form-group-two {
+    flex: 1 1 45%;
+    margin-bottom: 15px;
+}
+
+input, select {
+    width: 90%;
+    margin-top: 4px;
+}
+
+select {
+    padding: 1px 2px;
+}
+
+label {
+    color: var(--titleText);
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.homeP{
+    background-image: url("https://images.pexels.com/photos/7060815/pexels-photo-7060815.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+    content:inherit;
+ 
+}
+
+.addItemBtn {
+    width: 60%;
+    margin-top: 20px;
+}
+
+.introPage{
+    margin: 25px;
+    
+    
+}
+
+.backG{
+    color:#353966;
+    
+}
+
+.bodyText{
+    font-size: 1.2rem;
+      margin: 25px;
+      color:#353966;
+}
+
+.addList{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.howTo{
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2rem;
+    text-decoration: underline;
+    padding-left: 25px;
+    
+}
+
+ul, li{
+    line-height: 200%;
+    font-weight: bold;
+    font-size: 20px;
+    list-style-type: circle;
+}
+
+/* --------------------------------------------------------------- */
+/* Media Queries */
+@media screen and (max-width: 910px) {
+
+    main {
+        height: initial;
+    }
+
+    .leftAside{
+        width: 100%;
+    }
+
+    .pageNav, .pageNav a {
+        width: 240px;
+    }
+
+    .form-group {
+        width: 300px;
+    }
+
+    .formBtn, #logoutBtn, .addItemBtn {
+        width: 176px;
+    }
+}
+
+@media screen and (max-width: 610px) {
+
+    .sectionContent {
+        width: 100%;
+    }
+
+    h3 {
+        padding: 15px;
+        width: 100%;
+    }
+    
+    .allLists {
+        margin: 10px 0;
+        margin-top: 30px;
+    }
+
+    .listContainer, .itemEntryCard {
+        padding: 15px;
+        margin: 0 auto;
+        margin-bottom: 15px;
+        width: 95%;
+    }
+
+    .listRow {
+        flex-wrap: wrap;
+        margin-bottom: 10px;
+    }
+    
+    .category {
+        flex: 1 1 auto;
+    }
+
+    .break {
+        flex: 1 1 100%
+    }
+
+    .form-group-two {
+        flex: 1 1 80%;
+    }
+
+    input, select {
+        width: 100%;
+    }
+}

@@ -1,0 +1,37 @@
+
+    <div>
+        <h3 id="userName">Hello {{userData.name}}!</h3>
+    </div>
+    <div class="allLists">
+        <div class="itemEntryCard">
+            <h4>Item Entry</h4>
+            <form class="addItemForm">
+                <div class="form-group-two">
+                    <label for="itemName">Item Name</label><br>
+                    <input class="addItemInput" type="text" id="itemName" placeholder="Apples">
+                </div>
+                <div class="form-group-two">
+                    <label for="itemCategory">Category</label><br>
+                    <select class="addItemCategory" id="itemCategory">
+                        <option value="4">Cupboard</option>
+                        <option value="1">Fridge</option>
+                        <option value="2">Freezer</option>
+                        <option value="3">Produce</option>
+                    </select>
+                </div>
+                <div class="form-group-two">
+                    <label for="purchaseDate">Date Purchased<span><br></span> Blank is Today</label><br>
+                    <input class="addItemInput" type="text" id="purchaseDate" placeholder="M/D/YY">
+                </div>
+                <div class="form-group-two">
+                    <label for="expirationDate">Expiration Date</label><br>
+                    <input class="addItemInput" type="text" id="expirationDate" placeholder="M/D/YY">
+                </div>
+                <div class="form-group-two">
+                    <button class="addItemBtn" type="submit" id="addItemBtn">Add Item</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+<script src="/js/addItem.js"></script>

@@ -1,0 +1,28 @@
+
+    <div>
+        <h3>Hello {{userPantry.name}}!</h3>
+    </div>
+    <div class="allLists">
+        <div class="listContainer">
+            <h4>Expired!</h4>
+            {{#each userPantry.products as |product|}}
+                {{#if (expiredCheck product.expiration_date)}}
+                   {{> itemExpired }}
+                {{/if}}
+            {{/each}}
+        </div>
+        <div class="listContainer">
+            <h4>Still Usable</h4>
+            {{#each userPantry.products as |product|}}
+                {{#if (weekCheck product.expiration_date)}}
+                    {{> itemWeek }}
+                {{else if (monthCheck product.expiration_date)}}
+                    {{> itemMonth }}
+                {{else if (noRushCheck product.expiration_date)}}
+                    {{> itemNoRush }}
+                {{/if}}
+            {{/each}}
+        </div>
+    </div>
+    
+<script src="/js/deleteItem.js"></script>
